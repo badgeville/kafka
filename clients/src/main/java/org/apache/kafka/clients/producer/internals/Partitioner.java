@@ -32,6 +32,7 @@ import org.apache.kafka.common.utils.Utils;
  * <li>If a partition is specified in the record, use it
  * <li>If no partition is specified but a key is present choose a partition based on a hash of the key
  * <li>If no partition or key is present choose a partition in a round-robin fashion
+ * </ul>
  */
 public class Partitioner {
 

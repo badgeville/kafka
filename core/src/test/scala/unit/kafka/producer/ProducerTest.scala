@@ -17,7 +17,6 @@
 
 package kafka.producer
 
-import org.scalatest.TestFailedException
 import org.scalatest.junit.JUnit3Suite
 import kafka.consumer.SimpleConsumer
 import kafka.message.Message
@@ -27,14 +26,17 @@ import org.apache.log4j.{Level, Logger}
 import org.junit.Test
 import kafka.utils._
 import java.util
+
 import kafka.admin.AdminUtils
 import util.Properties
+
 import kafka.api.FetchRequestBuilder
 import org.junit.Assert.assertTrue
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertEquals
 import kafka.common.{ErrorMapping, FailedToSendMessageException}
 import kafka.serializer.StringEncoder
+import org.scalatest.exceptions.TestFailedException
 
 class ProducerTest extends JUnit3Suite with ZooKeeperTestHarness with Logging{
   private val brokerId1 = 0
